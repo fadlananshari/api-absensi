@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('attendance_rules', function (Blueprint $table) {
             $table->id();
+            $table->time('office_start');
+            $table->time('office_end');
+            $table->decimal('latitude', 10, 7);
+            $table->decimal('longitude', 10, 7);
             $table->timestamps();
         });
     }
